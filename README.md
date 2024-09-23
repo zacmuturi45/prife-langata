@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MY NEXT.JS PROJECTS
 
-## Getting Started
+- After creating your next.js directory, enter the src folder and delete the modules.css and globals.css files
+- Delete the main content in the page.js and layout.js files.
+- Create an 'images' folder in your public directory, then create an imports.js file. This is where you will be storing your images for use throughout the app
+- Create a gulpfile.js in your root folder.
+- Create a Sass folder in your app directory.
+- Create an index.scss file in the Sass folder. This is where your sass code is going to be located.
 
-First, run the development server:
+## Installations
+
+### Gulp
+
+- Our project will be using Sass so we need to install gulp to handle our sass code as it is not compatible with browsers.
+- Run the following commands:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install gulp gulp-sass sass gulp-purgecss --save-dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Gulp runs our auto-completion tasks, gulp-sass is a plugin which will compile our sass code and --save-dev ensures these libraries are saved as dependencies in our package.json.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- In your gulpfile, enter the following code
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+const { src, dest, watch, series } = require('gulp')
+const sass = require('sass')
+const gulpSass = require('gulp-sass')(sass)
+const purgecss = require('gulp-purgecss')
 
-## Learn More
+function buildSass() {
+    return src('src/app/Sass/*.scss')
+    .pipe(gulpSass().on('error', gulpSass.logError))
+    .pipe(purgecss({ content: ['src/app/**/*.jsx']}))
+    .pipe(dest('src/app/css'))
+}
 
-To learn more about Next.js, take a look at the following resources:
+function watchSass() {
+    watch(['src/app/Sass/*.scss', 'src/app/**/*.jsx'], buildSass)
+}
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+exports.default = series(buildSass, watchSass)
+```
