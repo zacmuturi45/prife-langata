@@ -41,3 +41,20 @@ function watchSass() {
 
 exports.default = series(buildSass, watchSass)
 ```
+
+## Cloning the template
+
+- Clone the template from Github into your project folder.
+- Using your terminal, remove the origin upstream. `git remote remove origin`.
+- Create a new repository for your project on github.
+- Copy the link and use it as your new upstream. `git remote add origin <link>`
+
+### Steps
+
+```bash
+git remote remove origin
+git remote add origin <your link>
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+```
