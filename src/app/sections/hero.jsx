@@ -58,7 +58,7 @@ export default function Hero() {
 
         <div className="hero-title">
           <h1>You deserve to live without pain!</h1>
-          <p>We empower your body&apos;s natural ability to self-heal. Through terahertz therapy—a revolutionary treatment that enhances cellular balance—and our research-backed supplements, we target chronic conditions at the root cause. Our therapies offer relief for arthritis, Cancer support, diabetes, spine-related conditions, women and men's reproductive health, diabetes and so much more. Pay us a visit today to experience healing from within, the natural way!"</p>
+          <p>We empower your body&apos;s natural ability to self-heal. Through terahertz therapy—a revolutionary treatment that enhances cellular balance—and our research-backed supplements, we target chronic conditions at the root cause. Our therapies offer relief for arthritis, Cancer support, diabetes, spine-related conditions, women and men&apos;s reproductive health, diabetes and so much more. Pay us a visit today to experience healing from within, the natural way!</p>
           <div className="buttondiv">
             <Link href={"/terahertz"}><button id='consultation-button'>Learn more</button></Link>
             <button>
@@ -73,19 +73,19 @@ export default function Hero() {
           <div className="info" style={{ backgroundColor: "#162d64" }}>
             <Image src={lights} width={35} height={35} alt='logo' />
             <h4>Non-invasive</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eius alias temporibus.</p>
+            <p>No syringes, no needles.</p>
           </div>
 
           <div className="info" style={{ backgroundColor: "#46e4f5" }}>
             <Image src={lights} width={35} height={35} alt='logo' />
             <h4>100% Natural</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eius alias temporibus.</p>
+            <p>Natural products all the way.</p>
           </div>
 
           <div className="info" style={{ backgroundColor: "#162d64" }}>
             <Image src={lights} width={35} height={35} alt='logo' />
             <h4>100% Drug-Free</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eius alias temporibus.</p>
+            <p>No popping pills anymore.</p>
           </div>
 
         </div>

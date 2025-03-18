@@ -6,11 +6,11 @@ import { prife } from '../../../public/imports'
 import Link from 'next/link'
 
 
-export default function Card({ product_brief, product_image, product_name, price, index, product_id, product_description, current_stock }) {
+export default function Card({ product_brief, product_image, product_name, price, key, product_id, product_description, current_stock }) {
 
 
     return (
-        <div className='card-main' key={index}>
+        <div className='card-main' key={key}>
             <Link href={`${product_id}`} style={{textDecoration: "none"}}>
                 <div className="card-image">
                     <Image src={product_image} height={100} width={100} alt='product_image' unoptimized={true} className='product_image' />

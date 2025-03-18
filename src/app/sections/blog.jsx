@@ -27,7 +27,7 @@ export default function Article() {
             <div className="blog-cards">
                 {
                     cardArray.map((item, index) => (
-                        <BlogCard image={item.image} date={item.date} category={item.category} title={item.title} time={item.time} index={index} id={item.id} />
+                        <BlogCard image={item.image} date={item.date} category={item.category} title={item.title} time={item.time} key={index} id={item.id} />
                     ))
                 }
             </div>

@@ -14,7 +14,7 @@ export default function Shop() {
             <div className="cardbox">
                 {
                   products.map((item, index) => (
-                    <Card product_brief={item.product_brief} product_image={item.product_image} product_name={item.product_name} product_id={item.product_id} product_description={item.product_description} product_price={item.price} current_stock={item.current_stock} index={index} />
+                    <Card product_brief={item.product_brief} product_image={item.product_image} product_name={item.product_name} product_id={item.product_id} product_description={item.product_description} product_price={item.price} current_stock={item.current_stock} key={index} />
                   ))
                 }
             </div>

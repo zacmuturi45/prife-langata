@@ -14,7 +14,7 @@ export default function Blog() {
                 <div className="blog-articles">
                     {
                         blogArticles.map((item, index) => (
-                            <BlogCards image={item.image} author={item.author} content={item.content.intro.slice(0, 150)} title={item.title} index={index} date={item.date} id={item.id} />
+                            <BlogCards image={item.image} author={item.author} content={item.content.intro.slice(0, 150)} title={item.title} key={index} date={item.date} id={item.id} />
                         ))
                     }
                 </div>

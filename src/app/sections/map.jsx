@@ -12,8 +12,8 @@ export default function Map() {
 
                 <div className='map-info'>
                     <div className="map-info-container">
-                        <h2>Lang'ata Wellness Gallery</h2>
-                        <p className='address'>NHC Court Mall Lang'ata<br />Shop 8</p>
+                        <h2>Lang&apos;ata Wellness Gallery</h2>
+                        <p className='address'>NHC Court Mall Lang&apos;ata<br />Shop 8</p>
                         <div className='open-time'>
                             <h5>Hours of Operation:</h5>
                             <p>Monday - Friday: <span>8:00 AM - 6:00 PM</span></p>

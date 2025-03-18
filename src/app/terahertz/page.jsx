@@ -22,7 +22,7 @@ export default function Terahertz() {
 
                     <div>
                         <h3>Who is Terahertz Therapy For?</h3>
-                        <p>Terahertz therapy is ideal for anyone seeking to improve their health and well-being, from individuals managing chronic conditions to those looking to optimize their body's natural functions. Whether you experience fatigue, joint pain, poor circulation, inflammation, or dealing with a chronic illness, this therapy offers a holistic approach to restoration and vitality. It is especially beneficial for individuals with conditions such as arthritis, diabetes, hypertension, and other imbalances that impact daily life. Even if you are in good health, terahertz therapy helps maintain your body's equilibrium, enhance energy levels, and support preventive wellness.</p>
+                        <p>Terahertz therapy is ideal for anyone seeking to improve their health and well-being, from individuals managing chronic conditions to those looking to optimize their body&apos;s natural functions. Whether you experience fatigue, joint pain, poor circulation, inflammation, or dealing with a chronic illness, this therapy offers a holistic approach to restoration and vitality. It is especially beneficial for individuals with conditions such as arthritis, diabetes, hypertension, and other imbalances that impact daily life. Even if you are in good health, terahertz therapy helps maintain your body&apos;s equilibrium, enhance energy levels, and support preventive wellness.</p>
                     </div>
 
                     <div>
@@ -46,7 +46,7 @@ export default function Terahertz() {
 
                         <div className="expectation-box">
                             <h3>Personalized Plan</h3>
-                            <p>The number of sessions required depends on your unique condition, how long you've had it, and your body's response to therapy.</p>
+                            <p>The number of sessions required depends on your unique condition, how long you&apos;ve had it, and your body&apos;s response to therapy.</p>
                         </div>
 
                         <div className="expectation-box">
@@ -107,7 +107,7 @@ export default function Terahertz() {
                             <ul>
                                 <li>Peripheral Neuropathy</li>
                                 <li>Post Stroke Recovery</li>
-                                <li>Bell's Palsy</li>
+                                <li>Bell&apos;s Palsy</li>
                                 <li>Trigeminal Neuralgia</li>
                                 <li>Post-Herpetic Neuralgia</li>
                                 <li>Amyotrophic Lateral Sclerosis (ALS)</li>
@@ -180,7 +180,7 @@ export default function Terahertz() {
                             <div className="poly"></div>
                         </div>
                         <div className="textdiv">
-                            <p>Terahertz where it hurts! Get back to enjoying life's moments, as you should!</p>
+                            <p>Terahertz where it hurts! Get back to enjoying life&apos;s moments, as you should!</p>
                         </div>
                 </div>
 

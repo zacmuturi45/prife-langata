@@ -13,7 +13,7 @@ export default function Banner() {
 
         <div className='textdiv'>
           <h3>Discover the Power of Terahertz Therapy</h3>
-          <p>Imagine a therapy that works at the cellular level to boost energy, circulation and accelerate your body's healing abilities. Terahertz technology bridges science and wellness to help your body heal itself naturally.</p>
+          <p>Imagine a therapy that works at the cellular level to boost energy, circulation and accelerate your body&apos;s healing abilities. Terahertz technology bridges science and wellness to help your body heal itself naturally.</p>
           <p>100% Drug-Free, 100% non-invasive, 100% safe and natural. Unlock a new era of health and vitality today!</p>
 
           <Link href={"/terahertz"}>

@@ -29,7 +29,7 @@ export default function CommonQuestions() {
                     <div className="poly"></div>
                 </div>
                 <div className="textdiv">
-                    <p>Get back to enjoying life's moments, healthy, happy, as you should!</p>
+                    <p>Get back to enjoying life&apos;s moments, healthy, happy, as you should!</p>
                 </div>
             </div>
         </div>

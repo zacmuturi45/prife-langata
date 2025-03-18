@@ -5,11 +5,11 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
-export default function BlogCards({ image, author, content, title, index, date, id }) {
+export default function BlogCards({ image, author, content, title, key, date, id }) {
   const router = useRouter();
 
   return (
-    <div className='blogs-card-main' key={index} onClick={() => router.push(`/blog/${id}`)}>
+    <div className='blogs-card-main' key={key} onClick={() => router.push(`/blog/${id}`)}>
         <div className="blogs-container">
             <div className="blogs-image">
                 <Image src={image} height={100} width={100} unoptimized={true} alt='blog-image' />
