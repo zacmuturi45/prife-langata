@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Prife Lang'ata",
+  title: "Langata Wellness Center",
   description: "Achieve the Prime of your Life through our innovative health and wellness solutions.",
 };
 
