@@ -1,14 +1,24 @@
 "use client"
 
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
+import mailgo from 'mailgo';
 
 const CartContext = createContext(null);
+const mailgoConfig = {
+    dark: true,
+};
 
 export default function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
     const [sortBy, setSortBy] = useState("All");
     const [selectedCategory, setSelectedCategory] = useState("All")
     const categories = ["Wallpaper", "Marble Sheet", "Contact Paper", "Wall Panel", "Grass Turf"]
+
+    
+    useEffect(() => {
+        mailgo(mailgoConfig);
+    }, [])
+
 
     const addToCart = (product) => {
         setCart((prevCart) => [...prevCart, product])

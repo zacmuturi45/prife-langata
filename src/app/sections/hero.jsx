@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { circlearrow, lights, old1, old2, old3, old4 } from '../../../public/imports'
 import { AnimatePresence, motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Hero() {
   const images = [
@@ -36,7 +37,7 @@ export default function Hero() {
     <main className='hero-main'>
       <div className="carousel-container" id='carcont'>
         <div className='absdiv'></div>
-        <AnimatePresence mode='wait'>
+        <AnimatePresence>
           {images.map((image, index) => (
             <motion.div
               className='hero-image'
@@ -56,11 +57,15 @@ export default function Hero() {
         </AnimatePresence>
 
         <div className="hero-title">
-          <h1>Revolutionizing wellness with cutting edge-technology</h1>
-          <p>Prife, meaning "Prime Life" embodies our mission to help clients achieve the prime of their health and well-being in their lives.</p>
+          <h1>You deserve to live without pain!</h1>
+          <p>We empower your body&apos;s natural ability to self-heal. Through terahertz therapy—a revolutionary treatment that enhances cellular balance—and our research-backed supplements, we target chronic conditions at the root cause. Our therapies offer relief for arthritis, Cancer support, diabetes, spine-related conditions, women and men's reproductive health, diabetes and so much more. Pay us a visit today to experience healing from within, the natural way!"</p>
           <div className="buttondiv">
-            <button id='consultation-button'>Request consultation</button>
-            <button>Contact</button>
+            <Link href={"/terahertz"}><button id='consultation-button'>Learn more</button></Link>
+            <button>
+              <a href='tel:254707486258' style={{ textDecoration: "none", color: "black" }}>
+                Contact
+              </a>
+            </button>
           </div>
         </div>
 

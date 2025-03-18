@@ -2,39 +2,28 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import { cart, cartimage, stock } from '../../../public/imports'
-import { useCart } from '../contexts/cartContext'
+import { prife } from '../../../public/imports'
+import Link from 'next/link'
 
-export default function Card({ product_image, product_name, price, index, product_category, product }) {
-    const { addToCart, cart, removeFromCart } = useCart();
-    const [added, setAdded] = useState(false);
+
+export default function Card({ product_brief, product_image, product_name, price, index, product_id, product_description, current_stock }) {
+
 
     return (
         <div className='card-main' key={index}>
-            <div className="card-container">
-                <div className="image">
-                    <Image src={product_image} width={100} height={100} alt='product-image' className='img' unoptimized={true} />
+            <Link href={`${product_id}`} style={{textDecoration: "none"}}>
+                <div className="card-image">
+                    <Image src={product_image} height={100} width={100} alt='product_image' unoptimized={true} className='product_image' />
                 </div>
-                <div className="card-info">
-                    <h4 style={{ marginBottom: ".3rem" }}>{product_category}</h4>
-                    <p style={{ fontSize: ".9rem", marginBottom: ".3rem" }}>{product_name}</p>
-                    <div className="text">
-                        <p>Kshs<span>{price}</span></p>
-                        <div className="addtocartdiv"  onClick={() => {
-                                const existing_product = cart.some(item => item.id === index)
-                                if (!existing_product) {
-                                    addToCart(product)
-                                    setAdded(true)
-                                } else {
-                                    removeFromCart(index)
-                                    setAdded(false)
-                                }
-                            }}>
-                            <p>{added ? "Remove from cart" : "Add to cart"}</p>
-                        </div>
+                <div className="card-detail">
+                    <div className="card-detail-name">{product_name}</div>
+                    <div className="card-detail-brief">{product_brief}</div>
+                    <div className="card-detail-logo">
+                        <Image src={prife} height={50} width={80} alt='lwg-logo' />
+                        <div className="cart-button"><button>Add to Cart</button></div>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     )
 }
